@@ -16,5 +16,3 @@ The summary isn't displayed - there is a line which has been commented out that 
 
 - I started by exploring the API to get familiar with the response and how to parse it
 - Following my research I decided to use isomorphic-fetch to make the API call and fast-html-parser to parse the HTML response
-- I used ```node inspect interface.js``` with ```debugger``` (cont and repl) to get visibility on the data available at each step as I was working on the API response.
-- Ideally I'd have liked to do this test driven and organize the code in classes - unfortunately the lack of familiarity with the type of response led to more time than expected being spent in that section
