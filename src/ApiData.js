@@ -16,8 +16,8 @@ class ApiData {
       console.log(this.display(parsed,".bday"))
       console.log(this.display(parsed,".birthplace"))
       console.log(this.display(parsed,".deathplace"))
-      // console.log(this.display(parsed,".mw-parser-output"))
       // console.log(this.display(parsed,".infobox"))
+      // console.log(this.display(parsed,".mw-parser-output"))
     })
 
   }
