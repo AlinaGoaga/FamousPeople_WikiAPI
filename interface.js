@@ -1,19 +1,11 @@
 require("isomorphic-fetch");
 
-process.argv.forEach(function (val, index, array) {
-  if (index === 2) {
-    console.log(val)
-  }
-});
+const name = process.argv.slice(2)[0]
 
-// process.argv.forEach(function (val, index, array) {
-//   console.log(index + ': ' + val);
-// });
-
-function getWikiData() {
+function getWikiData(name) {
 
   const HTMLParser = require('fast-html-parser');
-  const urlAPI = "https://en.wikipedia.org/w/api.php?action=parse&page=Seth_Rogen&format=json";
+  const urlAPI = `https://en.wikipedia.org/w/api.php?action=parse&page=${name}&format=json`;
   const otherParams = {
     method: "GET"
   };
@@ -46,4 +38,4 @@ function display(parsed, selector) {
 
 }
 
-getWikiData();
+getWikiData(name);
