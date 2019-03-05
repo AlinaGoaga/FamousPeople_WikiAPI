@@ -1,5 +1,15 @@
 require("isomorphic-fetch");
 
+process.argv.forEach(function (val, index, array) {
+  if (index === 2) {
+    console.log(val)
+  }
+});
+
+// process.argv.forEach(function (val, index, array) {
+//   console.log(index + ': ' + val);
+// });
+
 function getWikiData() {
 
   const HTMLParser = require('fast-html-parser');
@@ -21,7 +31,7 @@ function getWikiData() {
     console.log(display(parsed,".bday"))
     console.log(display(parsed,".birthplace"))
     console.log(display(parsed,".deathplace"))
-    console.log(display(parsed,".mw-parser-output"))
+    // console.log(display(parsed,".mw-parser-output"))
   })
 
 }
