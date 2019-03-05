@@ -18,14 +18,20 @@ function getWikiData() {
   })
   .then(parsed=>{
     console.log(display(parsed,".mw-redirect"))
+    console.log(display(parsed,".bday"))
+    console.log(display(parsed,".birthplace"))
+    console.log(display(parsed,".deathplace"))
+    console.log(display(parsed,".mw-parser-output"))
   })
 
 }
 
 function display(parsed, selector) {
 
-  if (parsed.querySelector(".mw-redirect") != null) {
-    return parsed.querySelector(".mw-redirect").text
+  if (parsed.querySelector(selector) != null) {
+    return parsed.querySelector(selector).text
+  } else {
+    return "Unavailable"
   }
 
 }
