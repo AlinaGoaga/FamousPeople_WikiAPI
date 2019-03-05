@@ -13,11 +13,11 @@ class ApiData {
     .then(res=>{return res.parse.text['*']})
     .then(result=>{return HTMLParser.parse(result)})
     .then(parsed=>{
-      console.log(this.display(parsed,".mw-redirect"))
       console.log(this.display(parsed,".bday"))
       console.log(this.display(parsed,".birthplace"))
       console.log(this.display(parsed,".deathplace"))
-      // console.log(display(parsed,".mw-parser-output"))
+      // console.log(this.display(parsed,".mw-parser-output"))
+      // console.log(this.display(parsed,".infobox"))
     })
 
   }
