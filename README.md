@@ -2,6 +2,11 @@
 
 ## How to run
 
+Before using the app, please run the below which will install the isomorphic fetch and the html parser needed to run the code.
+
+```npm install 'isomorphic-fetch```
+```npm install 'fast-html-parser```
+
 To get the details for a specific celebrity:
 
 ```node interface.js celebrity_name```
